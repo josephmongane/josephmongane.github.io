@@ -1,0 +1,56 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 2. Class Selector: Styles the container card */
+.profile-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* 3. Pseudo-class Selector: Adds a hover animation to the card */
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 4. Descendant Selector: Styles the h2 tag inside the card */
+.profile-card h2 {
+  color: #2c3e50;
+  font-size: 24px;
+  margin: 10px 0 5px 0;
+}
+
+/* 5. Class Selector: Styles paragraph text */
+.profile-title {
+  color: #7f8c8d;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* 6. ID Selector: Styles a unique follow button */
+#follow-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#follow-btn:hover {
+  background-color: #2980b9;
+}

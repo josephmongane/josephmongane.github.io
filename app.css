@@ -17,7 +17,7 @@
 
 body {
   margin: 0;
-  font-family: 'EB Garmond', Tahoma, 'Times New Roman', Times, serif, Verdana, sans-serif;
+  font-family: 'EB Garamond', 'Times New Roman', Times, serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;

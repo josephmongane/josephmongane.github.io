@@ -4,8 +4,8 @@
   --surface: #0f0f12;
   --text: #f1f5f9;
   --text-muted: #94a3b8;
-  --accent: #3b82f6;
-  --accent-dark: #60a5fa;
+  --accent: #aaada6;
+  --accent-dark: #8b9aae;
   --border: #26262c;
   --radius: 14px;
   --max-width: 1080px;
@@ -315,7 +315,7 @@ main {
 }
 
 .tag {
-  background: rgba(59, 130, 246, 0.16);
+  background: rgba(157, 162, 241, 0.16);
   color: var(--accent-dark);
   font-size: 12px;
   font-weight: 600;
@@ -369,7 +369,7 @@ main {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  background: #0f172a;
+  background: #42547de5;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
 }
 
@@ -407,7 +407,7 @@ main {
 }
 
 .carousel-btn:hover {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(37, 45, 64, 0.8);
 }
 
 .carousel-btn.prev {

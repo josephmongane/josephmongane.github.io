@@ -452,16 +452,33 @@ main {
   text-align: left;
 }
 
-.site-footer .section-heading,
-.site-footer .section-text {
+.footer-inner {
   max-width: var(--max-width);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.footer-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.footer-photo {
+  flex-shrink: 0;
+}
+
+.footer-photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .contact-links {
-  max-width: var(--max-width);
-  margin: 20px auto 0 auto;
+  margin: 20px 0 0 0;
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
@@ -483,6 +500,17 @@ main {
 @media (max-width: 720px) {
   .hero-banner {
     max-height: 220px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .footer-photo img {
+    width: 140px;
+    height: 140px;
   }
 
   .nav-toggle {

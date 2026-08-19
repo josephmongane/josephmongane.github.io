@@ -243,6 +243,17 @@ main {
   margin-top: 24px;
 }
 
+/* 2 x 3 grid of key projects on the home page */
+.project-grid-featured {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 720px) {
+  .project-grid-featured {
+    grid-template-columns: 1fr;
+  }
+}
+
 .project-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -256,10 +267,30 @@ main {
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
 }
 
-.project-card img {
+.project-card > img {
   width: 100%;
   height: 180px;
   object-fit: cover;
+}
+
+/* Mini carousel embedded in a featured project card */
+.carousel-mini {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.carousel-mini .carousel-slide img {
+  aspect-ratio: 3 / 2;
+}
+
+.carousel-mini .carousel-dots {
+  bottom: 10px;
+}
+
+.carousel-mini .carousel-dot {
+  width: 6px;
+  height: 6px;
+  pointer-events: none;
 }
 
 .project-card-body {

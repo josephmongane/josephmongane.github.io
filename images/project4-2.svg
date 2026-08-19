@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+  <text x="600" y="400" font-family="Consolas, 'Courier New', monospace" font-size="42" fill="rgba(255,255,255,0.92)" text-anchor="middle" dominant-baseline="middle">PROJECT 04 — IMG 2</text>
+  <text x="600" y="450" font-family="Consolas, 'Courier New', monospace" font-size="18" fill="rgba(255,255,255,0.6)" text-anchor="middle" dominant-baseline="middle">1200 x 800 placeholder</text>
+</svg>

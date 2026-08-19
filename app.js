@@ -23,14 +23,20 @@ function initCarousel(root) {
 
   if (!track || slides.length === 0) return;
 
+  const isAuto = root.hasAttribute('data-autoplay');
+  const autoInterval = parseInt(root.getAttribute('data-autoplay'), 10) || 3000;
   let index = 0;
+  let timer = null;
 
   slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.type = 'button';
+    // Autoplay cards use plain (non-interactive) dots so they can sit inside a link.
+    const dot = document.createElement(isAuto ? 'span' : 'button');
     dot.className = 'carousel-dot';
-    dot.setAttribute('aria-label', `Go to image ${i + 1}`);
-    dot.addEventListener('click', () => goTo(i));
+    if (!isAuto) {
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Go to image ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i));
+    }
     dotsWrap.appendChild(dot);
   });
 
@@ -48,6 +54,14 @@ function initCarousel(root) {
 
   prevBtn && prevBtn.addEventListener('click', () => goTo(index - 1));
   nextBtn && nextBtn.addEventListener('click', () => goTo(index + 1));
+
+  if (isAuto && slides.length > 1) {
+    const start = () => { timer = setInterval(() => goTo(index + 1), autoInterval); };
+    const stop = () => clearInterval(timer);
+    start();
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+  }
 
   update();
 }

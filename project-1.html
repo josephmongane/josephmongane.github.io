@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Project One — Joseph Mongane</title>
+    <link rel="stylesheet" href="app.css"/>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="brand">J. Mongane</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-header">
+            <a href="projects.html" class="link-arrow back-link">← Back to projects</a>
+            <p class="eyebrow">// Project 01</p>
+            <h1>Project One Title</h1>
+            <p class="section-text project-intro">
+                Example project introduction. Describe the problem you set out to solve, the context
+                (school, work, personal), and the high-level approach you took. Two to three sentences
+                is a good target here — the carousel and sections below can carry the details.
+            </p>
+            <div class="tag-row">
+                <span class="tag">Tag A</span>
+                <span class="tag">Tag B</span>
+                <span class="tag">Tool / Language</span>
+            </div>
+        </section>
+
+        <section class="carousel-section">
+            <div class="carousel" data-carousel>
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="images/project1-1.svg" alt="Project One image 1 placeholder"/></div>
+                    <div class="carousel-slide"><img src="images/project1-2.svg" alt="Project One image 2 placeholder"/></div>
+                    <div class="carousel-slide"><img src="images/project1-3.svg" alt="Project One image 3 placeholder"/></div>
+                    <div class="carousel-slide"><img src="images/project1-4.svg" alt="Project One image 4 placeholder"/></div>
+                </div>
+                <button class="carousel-btn prev" type="button" aria-label="Previous image">&#8249;</button>
+                <button class="carousel-btn next" type="button" aria-label="Next image">&#8250;</button>
+                <div class="carousel-dots"></div>
+            </div>
+        </section>
+
+        <section class="project-details">
+            <div class="detail-block">
+                <h2 class="section-heading">Overview</h2>
+                <p class="section-text">
+                    Example overview text — what the project is, who it was for, and what constraints
+                    (time, budget, materials) shaped the design.
+                </p>
+            </div>
+            <div class="detail-block">
+                <h2 class="section-heading">My Role</h2>
+                <p class="section-text">
+                    Example role text — what you personally designed, built, or analyzed, and which
+                    parts were collaborative.
+                </p>
+            </div>
+            <div class="detail-block">
+                <h2 class="section-heading">Outcome</h2>
+                <p class="section-text">
+                    Example outcome text — results, metrics, lessons learned, or what you'd improve
+                    next time.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <h2 class="section-heading">Get in Touch</h2>
+        <p class="section-text">
+            Example contact blurb — replace with a short line inviting people to reach out.
+        </p>
+        <ul class="contact-links">
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+            <li><a href="https://github.com/josephmongane" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+        <p class="fine-print">&copy; 2026 Joseph Mongane. Built with HTML, CSS &amp; JS.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,29 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Joseph Mongane — Engineering Portfolio</title>
     <link rel="stylesheet" href="app.css"/>
 </head>
-
 <body>
 
-    <!-- Main Heading -->
-    <h1>Welcome to My Website</h1>
-    
-    <!-- Paragraph of text -->
-    <p>This is a simple paragraph of text introducing the webpage. HTML structures the content of the web.</p>
-    
-    <!-- Subheading -->
-    <h2>Key Features</h2>
-    
-    <!-- Unordered List -->
-    <ul>
-        <li>Easy to learn</li>
-        <li>Supported by all web browsers</li>
-        <li>Highly customizable with CSS</li>
-    </ul>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="brand">J. Mongane</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Hyperlink pointing to an external site -->
-    <p>Learn more at the <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a>.</p>
+    <main>
+        <!-- Cover / Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">// Engineering Portfolio</p>
+                <h1>Hi, I'm <span class="accent">Joseph Mongane</span>.</h1>
+                <p class="hero-subtitle">
+                    I'm an example placeholder tagline — swap this out for a one-line description of
+                    what kind of engineer you are and what problems you like to solve.
+                </p>
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn btn-primary">View Projects</a>
+                    <a href="index.html#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <img src="images/avatar.svg" alt="Placeholder profile photo" />
+            </div>
+        </section>
 
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2 class="section-heading">About Me</h2>
+            <p class="section-text">
+                Example bio text goes here. Talk about your background, the disciplines you work in
+                (e.g. mechanical, software, electrical), the tools you're fluent in, and what drives
+                your engineering approach. Two to four sentences is usually enough for a cover page —
+                save the deep dive for individual project pages.
+            </p>
+            <ul class="skills-list">
+                <li>Skill / Tool 1</li>
+                <li>Skill / Tool 2</li>
+                <li>Skill / Tool 3</li>
+                <li>Skill / Tool 4</li>
+                <li>Skill / Tool 5</li>
+            </ul>
+        </section>
+
+        <!-- Featured Projects Preview -->
+        <section class="featured-projects">
+            <div class="section-heading-row">
+                <h2 class="section-heading">Featured Projects</h2>
+                <a href="projects.html" class="link-arrow">See all projects →</a>
+            </div>
+            <div class="project-grid">
+                <a class="project-card" href="project-1.html">
+                    <img src="images/project1-1.svg" alt="Project One placeholder thumbnail" />
+                    <div class="project-card-body">
+                        <h3>Project One Title</h3>
+                        <p>Example one-line summary describing the goal and outcome of this project.</p>
+                        <div class="tag-row">
+                            <span class="tag">Tag A</span>
+                            <span class="tag">Tag B</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="project-card" href="project-2.html">
+                    <img src="images/project2-1.svg" alt="Project Two placeholder thumbnail" />
+                    <div class="project-card-body">
+                        <h3>Project Two Title</h3>
+                        <p>Example one-line summary describing the goal and outcome of this project.</p>
+                        <div class="tag-row">
+                            <span class="tag">Tag A</span>
+                            <span class="tag">Tag C</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="project-card" href="project-3.html">
+                    <img src="images/project3-1.svg" alt="Project Three placeholder thumbnail" />
+                    <div class="project-card-body">
+                        <h3>Project Three Title</h3>
+                        <p>Example one-line summary describing the goal and outcome of this project.</p>
+                        <div class="tag-row">
+                            <span class="tag">Tag B</span>
+                            <span class="tag">Tag D</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <h2 class="section-heading">Get in Touch</h2>
+        <p class="section-text">
+            Example contact blurb — replace with a short line inviting people to reach out.
+        </p>
+        <ul class="contact-links">
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+            <li><a href="https://github.com/josephmongane" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+        <p class="fine-print">&copy; 2026 Joseph Mongane. Built with HTML, CSS &amp; JS.</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>

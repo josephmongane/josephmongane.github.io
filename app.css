@@ -4,8 +4,8 @@
   --surface: #0f0f12;
   --text: #f1f5f9;
   --text-muted: #94a3b8;
-  --accent: #aaada6;
-  --accent-dark: #8b9aae;
+  --accent: #8ca6ab;
+  --accent-dark: #7f96b4;
   --border: #26262c;
   --radius: 4px;
   --max-width: 1080px;
@@ -360,6 +360,91 @@ main {
   font-size: 20px;
 }
 
+/* ---------- Small projects ---------- */
+.small-project-list {
+  padding: 32px 0 56px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.small-project {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.small-project:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Alternate the photo side down the page */
+.small-project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.small-project-photo {
+  flex: 0 0 360px;
+  max-width: 360px;
+}
+
+.small-project-photo img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.small-project-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.small-project-text h2 {
+  font-size: 22px;
+  margin: 0 0 10px 0;
+}
+
+/* Small-projects carousel on the projects page */
+.small-projects-carousel {
+  padding: 8px 0 56px 0;
+}
+
+.small-projects-carousel .carousel {
+  margin-top: 24px;
+}
+
+.carousel-small {
+  background: transparent;
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.carousel-small .carousel-slide {
+  /* Side padding keeps text clear of the prev/next buttons, bottom padding of the dots. */
+  padding: 32px 72px 48px 72px;
+}
+
+.carousel-small .small-project {
+  padding-bottom: 0;
+  border-bottom: none;
+  gap: 32px;
+}
+
+.carousel-small .small-project-photo {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+.small-project-text h3 {
+  font-size: 22px;
+  margin: 0 0 10px 0;
+}
+
 /* ---------- Carousel ---------- */
 .carousel-section {
   padding: 24px 0 8px 0;
@@ -506,6 +591,40 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
+  }
+
+  .small-project,
+  .small-project:nth-child(even) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .small-project-photo {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+
+  .carousel-small .carousel-slide {
+    padding: 24px 20px 44px 20px;
+  }
+
+  .carousel-small .small-project-photo {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+
+  .carousel-small .carousel-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .carousel-small .carousel-btn.prev {
+    left: 6px;
+  }
+
+  .carousel-small .carousel-btn.next {
+    right: 6px;
   }
 
   .footer-photo img {

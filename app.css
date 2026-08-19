@@ -1,12 +1,12 @@
 /* ---------- Base / Reset ---------- */
 :root {
-  --bg: #f8fafc;
-  --surface: #ffffff;
-  --text: #0f172a;
-  --text-muted: #64748b;
-  --accent: #2563eb;
-  --accent-dark: #1d4ed8;
-  --border: #e2e8f0;
+  --bg: #000000;
+  --surface: #0f0f12;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --accent: #3b82f6;
+  --accent-dark: #60a5fa;
+  --border: #26262c;
   --radius: 14px;
   --max-width: 1080px;
 }
@@ -264,7 +264,7 @@ main {
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.18);
 }
 
 .project-card > img {
@@ -315,7 +315,7 @@ main {
 }
 
 .tag {
-  background: rgba(37, 99, 235, 0.08);
+  background: rgba(59, 130, 246, 0.16);
   color: var(--accent-dark);
   font-size: 12px;
   font-weight: 600;

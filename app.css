@@ -17,7 +17,7 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'EB Garmond', Tahoma, 'Times New Roman', Times, serif, Verdana, sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -157,7 +157,7 @@ main {
 }
 
 .hero h1 {
-  font-size: 44px;
+  font-size: 35px;
   margin: 0 0 16px 0;
   line-height: 1.15;
 }

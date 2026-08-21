@@ -23,7 +23,8 @@ body {
   line-height: 1.6;
 }
 
-img {
+img,
+video {
   max-width: 100%;
   display: block;
 }
@@ -138,6 +139,8 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Keep the bottom of the banner in frame; the crop comes off the top. */
+  object-position: center bottom;
 }
 
 /* ---------- Hero ---------- */
@@ -281,6 +284,7 @@ main {
 
 .carousel-mini .carousel-slide img {
   aspect-ratio: 3 / 2;
+  object-fit: cover;
 }
 
 .carousel-mini .carousel-dots {
@@ -391,10 +395,12 @@ main {
   max-width: 360px;
 }
 
-.small-project-photo img {
+.small-project-photo img,
+.small-project-photo video {
   width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
+  max-height: 420px;
+  object-fit: contain;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
@@ -409,7 +415,7 @@ main {
   margin: 0 0 10px 0;
 }
 
-/* Small-projects carousel on the projects page */
+/* Small-projects carousel on the projects page: 3 photos at a time, stepping by one */
 .small-projects-carousel {
   padding: 8px 0 56px 0;
 }
@@ -419,30 +425,53 @@ main {
 }
 
 .carousel-small {
+  /* Read by initCarousel() to work out how far one step moves the track. */
+  --per-view: 3;
   background: transparent;
-  border: 1px solid var(--border);
   box-shadow: none;
+  border-radius: 0;
 }
 
 .carousel-small .carousel-slide {
-  /* Side padding keeps text clear of the prev/next buttons, bottom padding of the dots. */
-  padding: 32px 72px 48px 72px;
+  min-width: calc(100% / var(--per-view));
+  /* Gutters as padding, not gap, so one step stays exactly one slide width. */
+  padding: 0 6px;
 }
 
-.carousel-small .small-project {
-  padding-bottom: 0;
-  border-bottom: none;
-  gap: 32px;
+.carousel-small .carousel-slide img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
-.carousel-small .small-project-photo {
-  flex: 0 0 300px;
-  max-width: 300px;
+.carousel-small .carousel-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
 }
 
-.small-project-text h3 {
-  font-size: 22px;
-  margin: 0 0 10px 0;
+.carousel-small .carousel-btn.prev {
+  left: 8px;
+}
+
+.carousel-small .carousel-btn.next {
+  right: 8px;
+}
+
+/* Sit the dots under the strip rather than on top of the middle photo. */
+.carousel-small .carousel-dots {
+  position: static;
+  margin-top: 14px;
+}
+
+.carousel-small .carousel-dot {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.carousel-small .carousel-dot.active {
+  background: var(--accent);
 }
 
 /* ---------- Carousel ---------- */
@@ -467,10 +496,12 @@ main {
   min-width: 100%;
 }
 
-.carousel-slide img {
+.carousel-slide img,
+.carousel-slide video {
   width: 100%;
   aspect-ratio: 3 / 2;
-  object-fit: cover;
+  /* Source photos range from tall portrait to very wide, so fit rather than crop. */
+  object-fit: contain;
 }
 
 .carousel-btn {
@@ -560,6 +591,8 @@ main {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
+  /* Keep the right side of the photo in frame. */
+  object-position: right center;
 }
 
 .contact-links {
@@ -605,26 +638,16 @@ main {
     max-width: none;
   }
 
-  .carousel-small .carousel-slide {
-    padding: 24px 20px 44px 20px;
-  }
-
-  .carousel-small .small-project-photo {
-    flex: 1 1 auto;
-    max-width: none;
-  }
-
-  .carousel-small .carousel-btn {
-    width: 32px;
-    height: 32px;
+  .carousel-small {
+    --per-view: 2;
   }
 
   .carousel-small .carousel-btn.prev {
-    left: 6px;
+    left: 4px;
   }
 
   .carousel-small .carousel-btn.next {
-    right: 6px;
+    right: 4px;
   }
 
   .footer-photo img {

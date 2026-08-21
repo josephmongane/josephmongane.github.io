@@ -483,7 +483,8 @@ main {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  background: #42547de5;
+  /* Letterbox bars around contain-fitted images; black so they read as empty space. */
+  background: #000000;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
 }
 

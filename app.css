@@ -131,16 +131,12 @@ main {
 /* ---------- Banner ---------- */
 .hero-banner {
   width: 100%;
-  max-height: 380px;
-  overflow: hidden;
 }
 
 .hero-banner img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* Keep the bottom of the banner in frame; the crop comes off the top. */
-  object-position: center bottom;
+  /* No fixed height: the banner keeps its own aspect ratio so nothing is cropped. */
+  height: auto;
 }
 
 /* ---------- Hero ---------- */
@@ -626,10 +622,6 @@ main {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {
-  .hero-banner {
-    max-height: 220px;
-  }
-
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;

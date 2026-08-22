@@ -287,6 +287,15 @@ main {
   object-fit: cover;
 }
 
+/* Opt-in for projects whose stills vary too much in aspect to crop: show the whole
+   image and let black fill the space the crop would have taken. */
+.project-card-fit > img,
+.project-card-fit .carousel-mini .carousel-slide img,
+.carousel-fit .carousel-slide img {
+  object-fit: contain;
+  background: #000000;
+}
+
 .carousel-mini .carousel-dots {
   bottom: 10px;
 }

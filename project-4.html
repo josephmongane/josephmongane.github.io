@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Project Four — Joseph Mongane</title>
+    <title>Haptic Paddle — Joseph Mongane</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"/>
@@ -30,27 +30,28 @@
     <main>
         <section class="project-header">
             <a href="projects.html" class="link-arrow back-link">← Back to projects</a>
-            <p class="eyebrow">// Project 04</p>
-            <h1>Project Four Title</h1>
+            <p class="eyebrow">// Mechatronics</p>
+            <h1>Haptic Paddle</h1>
             <p class="section-text project-intro">
-                Example project introduction. Describe the problem you set out to solve, the context
-                (school, work, personal), and the high-level approach you took. Two to three sentences
-                is a good target here — the carousel and sections below can carry the details.
+                Advanced mechatronics final project: a haptic paddle that controls a moving object in a force field,
+                with real-time force feedback.
             </p>
             <div class="tag-row">
-                <span class="tag">SolidWorks</span>
-                <span class="tag">FEA</span>
-                <span class="tag">Manufacturing</span>
+                <span class="tag">Electronic Prototyping</span>
+                <span class="tag">KiCad</span>
+                <span class="tag">C++</span>
+                <span class="tag">Electronic Hardware</span>
+                <span class="tag">CAN</span>
             </div>
         </section>
 
         <section class="carousel-section">
             <div class="carousel" data-carousel>
                 <div class="carousel-track">
-                    <div class="carousel-slide"><img src="images/project4-1.jpg" alt="Four project image 1"/></div>
-                    <div class="carousel-slide"><img src="images/project4-2.jpg" alt="Four project image 2"/></div>
-                    <div class="carousel-slide"><img src="images/project4-3.jpg" alt="Four project image 3"/></div>
-                    <div class="carousel-slide"><img src="images/project4-4.jpg" alt="Four project image 4"/></div>
+                    <div class="carousel-slide"><img src="images/project4-1.jpg" alt="Haptic Paddle image 1"/></div>
+                    <div class="carousel-slide"><img src="images/project4-2.jpg" alt="Haptic Paddle image 2"/></div>
+                    <div class="carousel-slide"><img src="images/project4-3.jpg" alt="Haptic Paddle image 3"/></div>
+                    <div class="carousel-slide"><img src="images/project4-4.jpg" alt="Haptic Paddle image 4"/></div>
                     <div class="carousel-slide">
                         <video src="videos/project4-video.mp4" poster="images/project4-video-poster.jpg"
                                controls preload="metadata" playsinline></video>
@@ -64,24 +65,27 @@
 
         <section class="project-details">
             <div class="detail-block">
-                <h2 class="section-heading">Overview</h2>
+                <h2 class="section-heading">Objective</h2>
                 <p class="section-text">
-                    Example overview text — what the project is, who it was for, and what constraints
-                    (time, budget, materials) shaped the design.
+                    Create a haptic paddle with real-time force feedback that simulates moving an object through a
+                    virtual environment, controlling the force felt by the user with a closed-loop force control system
+                    and a servo motor.
                 </p>
             </div>
             <div class="detail-block">
-                <h2 class="section-heading">My Role</h2>
+                <h2 class="section-heading">Approach</h2>
                 <p class="section-text">
-                    Example role text — what you personally designed, built, or analyzed, and which
-                    parts were collaborative.
+                    Built a force controller around a force gauge, driving toward the desired force at each position. An
+                    AS5600 encoder tracks the paddle's polar position, from which the desired current is calculated
+                    against the positional force field. That current is communicated over CAN polling to an STM32
+                    current control system built around a DRV8833 H-bridge and an INA219.
                 </p>
             </div>
             <div class="detail-block">
                 <h2 class="section-heading">Outcome</h2>
                 <p class="section-text">
-                    Example outcome text — results, metrics, lessons learned, or what you'd improve
-                    next time.
+                    Produced a haptic paddle with near-real-time force feedback. The main obstacles to full
+                    functionality were latency in the desired-force signal and unstable tuning of the force controller.
                 </p>
             </div>
         </section>
@@ -92,7 +96,7 @@
             <div class="footer-text">
                 <h2 class="section-heading">Get in Touch</h2>
                 <p class="section-text">
-                    Contact me at any of the links below, and checkout my github.
+                    Contact me at any of the links below, and check out my GitHub.
                 </p>
                 <ul class="contact-links">
                     <li><a href="mailto:josephmongane2028@u.northwestern.edu">Email</a></li>

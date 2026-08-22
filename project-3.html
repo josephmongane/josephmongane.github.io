@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Project Three — Joseph Mongane</title>
+    <title>ECVT Manual Controls — Joseph Mongane</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"/>
@@ -30,27 +30,27 @@
     <main>
         <section class="project-header">
             <a href="projects.html" class="link-arrow back-link">← Back to projects</a>
-            <p class="eyebrow">// Project 03</p>
-            <h1>Project Three Title</h1>
+            <p class="eyebrow">// Baja SAE</p>
+            <h1>ECVT Manual Controls</h1>
             <p class="section-text project-intro">
-                Example project introduction. Describe the problem you set out to solve, the context
-                (school, work, personal), and the high-level approach you took. Two to three sentences
-                is a good target here — the carousel and sections below can carry the details.
+                A driver-controlled tuning system for Northwestern Baja SAE's electronic continuously variable
+                transmission (ECVT), built as part of the club's powertrain subsystem.
             </p>
             <div class="tag-row">
-                <span class="tag">Tag B</span>
-                <span class="tag">Tag D</span>
-                <span class="tag">Tool / Language</span>
+                <span class="tag">Electronic Prototyping</span>
+                <span class="tag">KiCad</span>
+                <span class="tag">C++</span>
+                <span class="tag">Electronic Hardware</span>
             </div>
         </section>
 
         <section class="carousel-section">
             <div class="carousel" data-carousel>
                 <div class="carousel-track">
-                    <div class="carousel-slide"><img src="images/project3-1.jpg" alt="Three project image 1"/></div>
-                    <div class="carousel-slide"><img src="images/project3-2.jpg" alt="Three project image 2"/></div>
-                    <div class="carousel-slide"><img src="images/project3-3.jpg" alt="Three project image 3"/></div>
-                    <div class="carousel-slide"><img src="images/project3-4.jpg" alt="Three project image 4"/></div>
+                    <div class="carousel-slide"><img src="images/project3-1.jpg" alt="ECVT Manual Controls image 1"/></div>
+                    <div class="carousel-slide"><img src="images/project3-2.jpg" alt="ECVT Manual Controls image 2"/></div>
+                    <div class="carousel-slide"><img src="images/project3-3.jpg" alt="ECVT Manual Controls image 3"/></div>
+                    <div class="carousel-slide"><img src="images/project3-4.jpg" alt="ECVT Manual Controls image 4"/></div>
                 </div>
                 <button class="carousel-btn prev" type="button" aria-label="Previous image">&#8249;</button>
                 <button class="carousel-btn next" type="button" aria-label="Next image">&#8250;</button>
@@ -60,24 +60,26 @@
 
         <section class="project-details">
             <div class="detail-block">
-                <h2 class="section-heading">Overview</h2>
+                <h2 class="section-heading">Objective</h2>
                 <p class="section-text">
-                    Example overview text — what the project is, who it was for, and what constraints
-                    (time, budget, materials) shaped the design.
+                    Create a robust, driver-operated manual tuning switch that adjusts ECVT tuning between max torque,
+                    max power, and discrete sheave positions, with a design able to reliably lock into those discrete
+                    positions.
                 </p>
             </div>
             <div class="detail-block">
-                <h2 class="section-heading">My Role</h2>
+                <h2 class="section-heading">Approach</h2>
                 <p class="section-text">
-                    Example role text — what you personally designed, built, or analyzed, and which
-                    parts were collaborative.
+                    Modeled and 3D-printed a rotary detent switch with adjustable cockpit mounting, designed a custom
+                    PCB in KiCad with footprints matched to the selected components, and modified the existing C++
+                    control logic to tune the PID loop for maximum torque and power based on engine RPM.
                 </p>
             </div>
             <div class="detail-block">
                 <h2 class="section-heading">Outcome</h2>
                 <p class="section-text">
-                    Example outcome text — results, metrics, lessons learned, or what you'd improve
-                    next time.
+                    Delivered a functional, driver-accessible ECVT tuning switch that integrates custom electronics and
+                    firmware into the vehicle's powertrain control system.
                 </p>
             </div>
         </section>
@@ -88,7 +90,7 @@
             <div class="footer-text">
                 <h2 class="section-heading">Get in Touch</h2>
                 <p class="section-text">
-                    Contact me at any of the links below, and checkout my github.
+                    Contact me at any of the links below, and check out my GitHub.
                 </p>
                 <ul class="contact-links">
                     <li><a href="mailto:josephmongane2028@u.northwestern.edu">Email</a></li>
